@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' type='text/css' href ="{{ url_for('static', filename= 'style.css')}}">
+    <title>Add Friend</title>
+</head>
+<body>
+    <h1>Friends:</h1>
+    <div class = "wrapper">
+            <div class="id">
+                <div class="headID">
+                    ID:
+                </div>
+                {% for x in friends: %}
+                    <p> {{x.id}} </p>
+                {% endfor %}
+            </div>
+            <div class="name">
+                <div class="headName">
+                    Name:                                    
+                </div>
+                {% for x in friends: %}
+                    <p> {{x.first_name}} {{x.last_name}}</p>
+                {% endfor %}
+            </div>
+            <div class="occupation">
+                <div class="headOcc">
+                    Occupation:
+                </div>
+                {% for x in friends: %}
+                    <p> {{x.occupation}} </p>
+                {% endfor %}
+            </div>
+        </div>
+        
+    
+
+    <h1>Add Friends:</h1>
+    <div class="wrapper1">
+        <form action='/create_friend' method = 'post'>
+            <p>
+                <label></label> Your First Name: </label>
+                <input type="text" id="Name" name="first_name">
+            </p>
+            <p>
+                    <label></label> Your Last Name: </label>
+                    <input type="text" id="Name" name="last_name">
+                </p>
+            <p>
+                <label></label> occupation: </label>
+                <input type="text" id="Name" name="occupation">
+            </p>
+            <input type='submit' value='submit'>
+        </form>        
+    </div>
+            
+</body>
+</html>

@@ -1,0 +1,23 @@
+.id,
+.name,
+.occupation{
+    border: 2px solid black;
+    display: inline-block;
+    padding: 0px 10px;
+    margin: -2px
+}
+
+.headID,
+.headName,
+.headOcc{
+    border: 1px solid black;
+    background-color: lightgray;
+    padding: 5px;
+    margin: 0px -10px
+}
+
+.wrapper1{
+    border: 2px solid black;
+    width: 300px;
+    padding: 10px;
+}
